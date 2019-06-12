@@ -8,11 +8,12 @@
     <link rel="icon" type="image/x-icon" href="./static/img/icon/web.ico" />
     <link rel="stylesheet" href="/static/css/common/navbar.css">
     <link rel="stylesheet" href="/static/css/tips.css">
+    <link rel="stylesheet" href="/static/css/common/sortable.min.css">
     <script src="/static/js/common/jquery.js"></script>
     <script src="/static/js/common/jquery.cookie.js"></script>
     <script src="/static/js/common/myajax.js"></script>
     <script src="/static/js/tips.js"></script>
-    <script src="/static/js/common/jaliswall.js"></script>
+    <script src="/static/js/common/sortable.min.js"></script>
 </head>
 <body>
     <div class="header">
@@ -30,23 +31,23 @@
             </ul>
         </div>
     </div>
-    <div class="wall">
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-    </div>
+    <ul>
+            <li>
+              <a data-sjslink="food"> [...] </a>
+            </li>
+            <li>
+              <a data-sjslink="development"> [...] </a>
+            </li>
+          </ul>
+          <div id="sortable" class="sjs-default">
+ 
+                <!-- 2nd step -->
+                <div data-sjsel="food"> [...] </div>
+                <div data-sjsel="development"> [...] </div>
+                <div data-sjsel="development"> [...] </div>
+              </div>  
 </body>
-<script>
-    	$(function(){
-		$('.wall').jaliswall({ item: '.article' });
-	});
-</script>
+<script type="text/javascript">
+    document.querySelector('#sortable').sortablejs()
+  </script>
 </html>
