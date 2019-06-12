@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>登录</title>
+    <script src="/static/js/common/jquery.js"></script>
+    <link rel="stylesheet" href="/static/css/login.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <form action="/login/checkForm" class="form">
+            <table boder="1" class="table" cellpadding="2" cellspacing="2" align="center" width="400" bgcolor="">
+                <tr>
+                    <td align="center">姓名</td>
+                    <td><input type="text" name="user"></td>
+                </tr>
+                <tr>
+                    <td align="center">密码</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td align="center"> 验证码</td>
+                    <td><input type="text" style="width: 40%" name="captcha"><img src="/captcha/get_captcha" alt=""
+                            onclick="handleImgSrc(this)"> </td>
+                </tr>
+
+            </table>
+            <input type="submit" value="登录">
+            <input type="reset" value="重置">
+        </form>
+    </div>
+</body>
+<script>
+
+    function handleImgSrc(e) {
+        e.src = "/captcha/get_captcha_agin"
+    }
+    //
+    document.onkeydown = function (e) {
+        if (e.keyCode == 13) {
+            $('[type="submit"]').click();
+        }
+    }
+</script>
+
+</html>

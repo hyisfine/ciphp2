@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>编译</title>
+  <!-- jquery引入 -->
+  <script src="/static/js/common/jquery.js"></script>
+  <script src="/static/js/common/jquery.cookie.js"></script>
+  <script src="/static/js/common/myajax.js"></script>
+
+  <!-- 引入summernote -->
+  <script src="/static/dist/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/static/dist/bootstrap.min.css">
+  <script src="/static/dist/summernote.js"></script>
+  <link rel="stylesheet" href="/static/dist/summernote.css">
+  <script type="text/javascript" src="/static/dist/lang/summernote-zh-CN.js"></script>
+
+  <!-- 引入emoji表情 -->
+  <link rel="stylesheet" href="/static/dist/tam-emoji/css/emoji.css">
+  <script src="/static/dist/tam-emoji/js/config.js"></script>
+  <script src="/static/dist/tam-emoji/js/tam-emoji.js"></script>
+
+  <!-- 自己代码 -->
+  <script src="/static/js/edit.js"></script>
+  <link rel="stylesheet" href="/static/css/edit.css">
+</head>
+
+<body>
+  <div class="header-nav"></div>
+  <div class="main">
+    <div class="main-popup">
+      <div class="pop-select">
+        <select class="select-nav">
+        </select>
+        <div class="add-select"><img src="/static/img/icon/add.png" alt=""></div>
+        <div class="add-box">
+          <h1>添加类别</h1>
+          <div class="box-input"><input type="text"></div>
+          <div class="pop-btn box-btn">
+              <button class="btn-no pop-btn-item add-no">取消</button>
+              <button class="btn-yes pop-btn-item add-yes">确定</button>
+            </div>
+        </div>
+      </div>
+      <div class="pop-btn">
+        <button class="btn-no pop-btn-item submit-no">取消</button>
+        <button class="btn-yes pop-btn-item submit-yes">确定</button>
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="input-group">
+        <input type="text" class="form-control title" placeholder="标题是。。。" aria-describedby="basic-addon1">
+      </div>
+      <div class="header-btn"><button type="button" class="btn btn-info" id="btn" style="height: 100%;">开始提交</button>
+      </div>
+    </div>
+    <div id="summernote" class="summernote"></div>
+  </div>
+</body>
+
+</html>

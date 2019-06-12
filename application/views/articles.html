@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>yhis Yoo! - 文档</title>
+	<link rel="icon" type="image/x-icon" href="./static/img/icon/web.ico" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- <meta http-equiv="refresh" content="2;" /> -->
+	<link rel="stylesheet" href="/static/layui/css/layui.css">
+	<link rel="stylesheet" href="/static/css/common/navbar.css">
+	<link rel="stylesheet" href="/static/css/articles.css">
+	<script src="/static/js/common/jquery.js"></script>
+	<script src="/static/js/common/jquery.cookie.js"></script>
+	<script src="https://cdn.bootcss.com/jsrender/1.0.1/jsrender.min.js"></script>
+	<script src="/static/layui/layui.js"></script>
+	<script src="/static/js/common/myajax.js"></script>
+	<script src="/static/js/articles.js"></script>
+</head>
+
+<body>
+	<!-- 导航 -->
+	<div class="header">
+		<a class="logo-bar" href="/">
+			<div class="header-logo"><img src="./static/img/portrait/20190608163754.jpg" alt="">
+				<h1>yhis Yoo!</h1>
+			</div>
+		</a>
+		<div class="header-nav">
+			<ul class="nav-bar">
+				<li><a href="javascript:void(0)">文档</a></li>
+				<li><a href="tips">随笔</a></li>
+				<li><a href="time">时间线</a></li>
+				<li><a href="about">关于我</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 主体 -->
+	<div class="main">
+		<!-- 标题选项卡 -->
+		<!-- 类别选项卡 -->
+		<!-- 分类、搜索 -->
+		<div class="main-header">
+			<ul class="main-ul">
+				<li class='select'>全部</li>
+			</ul>
+			<div class="layui-form main-ii">
+				<input type="text" name="title" required lay-verify="required" placeholder="请输入你想搜索的内容"
+					autocomplete="off" class="layui-input main-input">
+				<i class="layui-icon layui-icon-search"></i>
+			</div>
+		</div>
+		<!-- 文章列表 -->
+		<div class="main-content">
+		</div>
+		<!-- 分页 -->
+		<div class="main-page">
+			<div id="demo7"></div>
+			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+		</div>
+	</div>
+
+
+	<!-- 文章模板1  -->
+	<script id="temp" type="text/x-jsrender">
+				<div class="main-temp">
+					<div class="temp-title">
+						<div class="title-h1">
+							<a href=/article?={{:ar_id}}>{{:title}}</a>
+						</div>
+						<ul class="title-tag">
+							<li><i class="layui-icon layui-icon-note" style="font-size: 20px; color: #1E9FFF;font-weight: 700;"></i> {{:type_id}}</li>
+						</ul>
+						<span>{{:adddate}}</span>
+					</div>
+					<div class="temp-content">
+						{{:txt_show}}
+					</div>
+					<div class="temp-jump"><a href=/article?={{:ar_id}}>阅读全文 》》</a></div>
+				</div>
+	</script>
+
+</body>
+
+</html>

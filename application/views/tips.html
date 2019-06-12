@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hyis Yoo! - 随笔</title>
+    <link rel="icon" type="image/x-icon" href="./static/img/icon/web.ico" />
+    <link rel="stylesheet" href="/static/css/common/navbar.css">
+    <link rel="stylesheet" href="/static/css/tips.css">
+    <script src="/static/js/common/jquery.js"></script>
+    <script src="/static/js/common/jquery.cookie.js"></script>
+    <script src="/static/js/common/myajax.js"></script>
+    <script src="/static/js/tips.js"></script>
+    <script src="/static/js/common/jaliswall.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a class="logo-bar" href="javascript:void(0)">
+            <div class="header-logo"><img src="./static/img/portrait/20190608163754.jpg" alt="">
+                <h1>yhis Yoo!</h1>
+            </div>
+        </a>
+        <div class="header-nav">
+            <ul class="nav-bar">
+                <li><a href="articles">文档</a></li>
+                <li><a href="javascript:void(0)">随笔</a></li>
+                <li><a href="time">时间线</a></li>
+                <li><a href="about">关于我</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wall">
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+    </div>
+</body>
+<script>
+    	$(function(){
+		$('.wall').jaliswall({ item: '.article' });
+	});
+</script>
+</html>

@@ -1,0 +1,48 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html,
+body {
+	height: 100%;
+	background: antiquewhite;
+}
+#app {
+	width: 450px;
+	position: relative;
+	margin: auto;
+	background: aqua;
+	padding: 40px 20px;
+	top: 30%;
+	font-size: 30px;
+}
+tr td:first-child{
+	width: 30%;
+	line-height: 100%;
+}
+td{
+	padding: 10px;
+}
+
+input {
+	height: 40px;
+	width: 93%;
+	font-size: 15px;
+	padding-left:15px; 
+}
+img {
+	width: 100px;
+	height: 40px;
+	margin-left: 30px;
+	position: relative;
+	top: 15px;
+	cursor: pointer;
+}
+
+form>input:nth-of-type(1),form>input:nth-of-type(2){
+	padding: 0;
+	width: 30%;
+	margin: 10px 35px;
+	font-size: 25px;
+	cursor: pointer;
+}
