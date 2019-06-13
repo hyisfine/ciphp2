@@ -308,7 +308,7 @@ $(function() {
 	(function() {
 		// 加载类别
 		var alltype = getJSON({
-			url: "/api/get/getAllType",
+			url: "/api/get/getAllArticleType",
 			headers: {
 				token: $.cookie("u_token")
 			},

@@ -1,0 +1,54 @@
+.nav-bar>li:nth-child(3)>a{
+    opacity: 1;
+    border-bottom: 2px solid #2d74d7;
+}
+
+.main{
+    width: 9.6rem;
+    margin: 20px auto;
+    padding: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+}
+.time-box{
+    position: relative;
+    padding: 0 30px 30px;
+}
+.time-note,.items-note{
+    position: absolute;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #2d74d7;
+    top:0;
+    left: 0;
+    z-index: 9;
+}
+.nowBox-time{
+    margin: 0 0 15px;
+}
+.time-items{
+    border: 1px solid #ccc;
+}
+
+.items-box{
+    position: relative;
+    padding: 0 20px 10px;
+}
+.items-line{
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: #ccc;
+    left: 5px;
+}
+.items-content{
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 30px 10px 10px;
+}
+
+
+
+

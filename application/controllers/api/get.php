@@ -32,9 +32,14 @@ class Get extends CI_Controller
     }
 
     // 获取所有type
-    function getAllType()
+    function getAllArticleType()
     {
-        $result= $this->type->getAllType();
+        $result= $this->type->getAllArticleType();
+        $this->web_result->response(true, "获取成功！",$result[0],$result[1] );
+    }
+    function getAllTipsType()
+    {
+        $result= $this->type->getAllTipsType();
         $this->web_result->response(true, "获取成功！",$result[0],$result[1] );
     }
 
@@ -54,6 +59,20 @@ class Get extends CI_Controller
         $pagesize=isset($_GET["pagesize"])?$_GET["pagesize"]:5;
         $type_id=isset($_GET["type_id"])?$_GET["type_id"]:null;
         $result=$this->article->articlePages($page,$pagesize,$type_id);
+        $this->web_result->response(true, "获取成功！",$result[0],$result[1] );
+        
+    }
+        
+    // 获取所有tips数据
+    function getAllTips()
+    {
+        $this->load->model("tips");
+        // 获取分页数据
+        // $page=isset($_GET["page"])?$_GET["page"]:1;
+        // $pagesize=isset($_GET["pagesize"])?$_GET["pagesize"]:12;
+        // $type_id=isset($_GET["type_id"])?$_GET["type_id"]:null;
+        // $result=$this->tips->tipsPages($page,$pagesize,$type_id);
+        $result=$this->tips->getAllTips();
         $this->web_result->response(true, "获取成功！",$result[0],$result[1] );
         
     }
@@ -84,5 +103,9 @@ class Get extends CI_Controller
         $this->web_result->response(true, "获取成功！", $result );
     }
 
+    // 获取小贴士
+    // function getAllTips(){
+    //     $result=$this->;
+    // }
 
 }

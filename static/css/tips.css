@@ -1,1 +1,80 @@
+.nav-bar>li:nth-child(2)>a{
+    opacity: 1;
+    border-bottom: 2px solid #2d74d7;
 
+}
+.main{
+    width: 11.6rem;
+    margin: auto;
+}
+.type-box{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    line-height: 50px;
+}
+.type-box::after{
+    content: "";
+    clear: both;
+}
+.type-bar>li{
+    float: left;
+    margin: 20px;
+}
+.type-bar>li>a{
+    font-size: 25px;
+    color: rgba(64, 158, 255,0.3)
+}
+.type-bar>li>a:hover{
+    color: rgba(64, 158, 255, 0.7);
+}
+
+
+.select{
+    color: rgba(64, 158, 255,1) !important;
+
+}
+.cars>span{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    color: rgba(72, 183, 255,.8);
+}
+
+.sjs-default{
+    font-size: 20px;
+    margin-bottom: 150px;
+}
+.cars h1{
+    font-size: 20px;
+    padding:  25px 15px;
+    padding-bottom: 0;
+    color: #555;
+}
+.cars{
+    box-shadow: 5px 5px 10px rgba(72, 183, 255,0.5);
+    cursor: url(/static/img/portrait/link.cur), pointer;
+    position: absolute;
+    transition: all 0.5s !important;
+    background: rgba(255,255,255,0.5)
+}
+.cars:hover{
+    z-index: 9;
+    box-shadow: 0px 0px 30px rgba(72, 183, 255,0.8);
+}
+.cars:hover div{
+    box-shadow: 0 0 30px rgba(72, 183, 255,0.8);
+}
+
+.cars div{
+    position: relative;
+    padding: 20px;
+    margin: 20px;
+    font-size: 14px;
+    color: #555;
+    line-height: 25px;
+    text-align: left;
+    box-shadow: 5px 5px 10px rgba(72, 183, 255,0.5);
+    text-indent:25px;
+}
