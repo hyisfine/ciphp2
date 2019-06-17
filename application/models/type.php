@@ -24,6 +24,16 @@ class Type extends CI_Model
         return [$query->result(), $query->num_rows()];
     }
 
+    // 返回所有type  
+    function getAllType()
+    {
+        $sql1 = "select * from type where index_=1";
+        $query1 = $this->db->query($sql1);
+        $sql2 = "select * from type where index_=2";
+        $query2 = $this->db->query($sql2);
+        return [[$query1->result(),$query2->result()], $query1->num_rows()+$query2->num_rows()];
+    }
+
     // 返回一个type
     function getOneType($type_id)
     {

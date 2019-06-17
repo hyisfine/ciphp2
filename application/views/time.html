@@ -9,10 +9,13 @@
     <link rel="icon" type="image/x-icon" href="./static/img/icon/web.ico" />
     <link rel="stylesheet" href="/static/css/common/navbar.css">
     <link rel="stylesheet" href="/static/css/time.css">
+    <link href="https://cdn.bootcss.com/jqueryui/1.12.0/jquery-ui.min.css" rel="stylesheet">
     <script src="/static/js/common/jquery.js"></script>
     <script src="/static/js/common/jquery.cookie.js"></script>
     <script src="/static/js/common/myajax.js"></script>
+    <script src="https://cdn.bootcss.com/jqueryui/1.12.0/jquery-ui.min.js"></script>
     <script src="/static/js/time.js"></script>
+    <script src="https://cdn.bootcss.com/jsrender/1.0.1/jsrender.min.js"></script>
 </head>
 
 <body>
@@ -32,96 +35,28 @@
         </div>
     </div>
     <div class="main">
-        <div class="time-box">
-            <span class="time-note"></span>
-            <div class="nowBox-time">1998 1220 3365</div>
-            <div class="time-items">
-                <div class="items-box">
-                    <div class="items-note"></div>
-                    <div class="items-line"></div>
-                    <div class="items-content">
-                        <div class="items-title">biaoti</div>
-                    </div>
+        
+    </div>
+
+</body>
+<script id="text" type="text/x-jsrender">
+    <div class="time-box">
+        <div class="nowBox-time">{{getYM:time}}</div>
+        <span class="time-note"><img src="./static/img/icon/fold-before.png" alt=""></span>
+        {{for data}}
+        <div class="time-items">
+            <div class="items-box">
+                <div class="items-note"></div>
+                <div class="items-line"></div>
+                <div class="items-content">
+                    <div class="hidden" style="display:none">{{:~artOrTip(type_id)[0]}},{{:ar_id}}</div>
+                    <h4>{{:title}}</h4>
+                    <p>{{:~artOrTip(type_id)[0]}}，{{:~artOrTip(type_id)[1]}}，{{getTime:adddate}}</p>
                 </div>
-                <div class="items-box">
-                        <div class="items-note"></div>
-                        <div class="items-line"></div>
-                        <div class="items-content">
-                            <div class="items-title">biaoti</div>
-                        </div>
-                    </div>
             </div>
         </div>
-        <div class="time-box">
-                <span class="time-note"></span>
-                <div class="nowBox-time">1998 1220 3365</div>
-                <div class="time-items">
-                    <div class="items-box">
-                        <div class="items-note"></div>
-                        <div class="items-line"></div>
-                        <div class="items-content">
-                            <div class="items-title">biaoti</div>
-                        </div>
-                    </div>
-                    <div class="items-box">
-                            <div class="items-note"></div>
-                            <div class="items-line"></div>
-                            <div class="items-content">
-                                <div class="items-title">biaoti</div>
-                            </div>
-                        </div>
-                        <div class="items-box">
-                                <div class="items-note"></div>
-                                <div class="items-line"></div>
-                                <div class="items-content">
-                                    <div class="items-title">biaoti</div>
-                                </div>
-                            </div>
-                </div>
-            </div>
-            <div class="time-box">
-                    <span class="time-note"></span>
-                    <div class="nowBox-time">1998 1220 3365</div>
-                    <div class="time-items">
-                        <div class="items-box">
-                            <div class="items-note"></div>
-                            <div class="items-line"></div>
-                            <div class="items-content">
-                                <div class="items-title">biaoti</div>
-                            </div>
-                        </div>
-                        <div class="items-box">
-                                <div class="items-note"></div>
-                                <div class="items-line"></div>
-                                <div class="items-content">
-                                    <div class="items-title">biaoti</div>
-                                </div>
-                            </div>
-                            <div class="items-box">
-                                    <div class="items-note"></div>
-                                    <div class="items-line"></div>
-                                    <div class="items-content">
-                                        <div class="items-title">biaoti</div>
-                                    </div>
-                                </div>
-                                <div class="items-box">
-                                        <div class="items-note"></div>
-                                        <div class="items-line"></div>
-                                        <div class="items-content">
-                                            <div class="items-title">biaoti</div>
-                                        </div>
-                                    </div>
-                    </div>
-                    
-                </div>
-                
+        {{/for}}
     </div>
-</body>
-<!-- <script id="tips" type="text/x-jsrender">
-  <div data-sjsel={{:type_id}} class="cars">
-      <h1>{{:title}}</h1>
-      <div><span>{{:type_name}}</span>{{:content}}</div>
-    </div>
-</script> -->
+</script>
 
 </html>

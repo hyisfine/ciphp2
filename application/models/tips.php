@@ -19,4 +19,9 @@ class Tips extends CI_Model{
         // }
         return [ $this->db->query($sql)->result(), $this->db->query($sql)->num_rows()];
     }
+
+    function getOneTip($t_id){
+        $sql="select * from tips where t_id={$t_id}";
+        return $this->db->query($sql)->row();
+    }
 }

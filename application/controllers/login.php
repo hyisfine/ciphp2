@@ -21,9 +21,9 @@ class Login extends CI_Controller
 	// 加载验证页面
 	function checkForm()
 	{
-		$user = $this->db->escape($_GET["user"]);
-		$password = $_GET["password"];
-		$captcha = strtolower($_GET["captcha"]);
+		$user = $this->db->escape($_POST["user"]);
+		$password = $_POST["password"];
+		// $captcha = strtolower($_GET["captcha"]);
 
 		// 表单判断
 		
@@ -35,16 +35,16 @@ class Login extends CI_Controller
 		}
 		$password = md5($password);
 
-		if (empty($captcha)) {
-			$this->web_result->jump("请输入验证码！", "index");
-		}
-		if (!ctype_alnum($captcha)) {
-			$this->web_result->jump("请输入正确的验证码！", "index");
-		}
+		// if (empty($captcha)) {
+		// 	$this->web_result->jump("请输入验证码！", "index");
+		// }
+		// if (!ctype_alnum($captcha)) {
+		// 	$this->web_result->jump("请输入正确的验证码！", "index");
+		// }
 
-		if ($captcha != $this->session->userdata("captcha")) {
-			$this->web_result->jump("验证码错误！ ", "index");
-		}
+		// if ($captcha != $this->session->userdata("captcha")) {
+		// 	$this->web_result->jump("验证码错误！ ", "index");
+		// }
 
 		// 查询数据库进行身份判定
 		$sql = "select * from user where u_name={$user}";
@@ -81,6 +81,6 @@ class Login extends CI_Controller
 			$this->web_result->jump("出现未知错误！请重新登录！", "index");
 		}
 
-		$this->web_result->jump("登录成功！  ", "http://www.citest.com/");
+		$this->web_result->jump("登录成功！  ", "http://www.citest.com/admin");
 	}
 }
