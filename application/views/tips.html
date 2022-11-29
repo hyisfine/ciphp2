@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>hyis Yoo! - 随笔</title>
-    <link rel="icon" type="image/x-icon" href="./static/img/icon/web.ico" />
-    <link rel="stylesheet" href="/static/css/common/navbar.css">
-    <link rel="stylesheet" href="/static/css/tips.css">
-    <link rel="stylesheet" href="/static/css/common/sortable.min.css">
-    <script src="/static/js/common/jquery.js"></script>
-    <script src="/static/js/common/jquery.cookie.js"></script>
-    <script src="/static/js/common/myajax.js"></script>
-    <script src="/static/js/tips.js"></script>
-    <script src="/static/js/common/sortable.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hyis Yoo! - 随笔</title>
+  <link rel="icon" type="image/x-icon" href="./static/img/icon/web.ico" />
+  <link rel="stylesheet" href="/static/css/common/navbar.css">
+  <link rel="stylesheet" href="/static/css/common/sortable.min.css">
+  <link rel="stylesheet" href="/static/css/tips.css">
+  <script src="/static/js/common/jquery.js"></script>
+  <script src="/static/js/common/jquery.cookie.js"></script>
+  <script src="/static/js/common/sortable.min.js"></script>
+  <script src="/static/js/common/myajax.js"></script>
+  <script src="/static/js/tips.js"></script>
 </head>
+
 <body>
-    <div class="header">
-        <a class="logo-bar" href="javascript:void(0)">
-            <div class="header-logo"><img src="./static/img/portrait/20190608163754.jpg" alt="">
-                <h1>yhis Yoo!</h1>
-            </div>
-        </a>
-        <div class="header-nav">
-            <ul class="nav-bar">
-                <li><a href="articles">文档</a></li>
-                <li><a href="javascript:void(0)">随笔</a></li>
-                <li><a href="time">时间线</a></li>
-                <li><a href="about">关于我</a></li>
-            </ul>
-        </div>
+  <div class="header">
+    <a class="logo-bar" href="/">
+      <div class="header-logo"><img src="./static/img/portrait/20190608163754.jpg" alt="">
+        <h1>yhis Yoo!</h1>
+      </div>
+    </a>
+    <div class="header-nav">
+      <ul class="nav-bar">
+        <li><a href="articles">文档</a></li>
+        <li><a href="javascript:void(0)">随笔</a></li>
+        <li><a href="time">时间</a></li>
+        <li><a href="about">关于</a></li>
+      </ul>
     </div>
-    <ul>
-            <li>
-              <a data-sjslink="food"> [...] </a>
-            </li>
-            <li>
-              <a data-sjslink="development"> [...] </a>
-            </li>
-          </ul>
-          <div id="sortable" class="sjs-default">
- 
-                <!-- 2nd step -->
-                <div data-sjsel="food"> [...] </div>
-                <div data-sjsel="development"> [...] </div>
-                <div data-sjsel="development"> [...] </div>
-              </div>  
+  </div>
+  <div class="main">
+    <div class="type-box">
+      <ul class="type-bar">
+      </ul>
+    </div>
+    <div id="sortable" class="sjs-default">
+      <!-- 2nd step -->
+    </div>
 </body>
-<script type="text/javascript">
-    document.querySelector('#sortable').sortablejs()
-  </script>
+<!-- <script id="tips" type="text/x-jsrender">
+  <div data-sjsel={{:type_id}} class="cars">
+      <h1>{{:title}}</h1>
+      <div><span>{{:type_name}}</span>{{:content}}</div>
+    </div>
+</script> -->
 </html>

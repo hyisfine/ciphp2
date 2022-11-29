@@ -73,7 +73,7 @@
     position: relative;
     right: -6px;
     box-shadow: 5px 5px 10px rgba(72, 183, 255,0.5);
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.5);
 }
 .main-ii{
     position: absolute;
@@ -109,7 +109,7 @@
 }
 
 .main-temp{
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.5);
     padding:40px 30px 80px;
     position: relative;
     border: 1px  solid rgba(126, 232, 255,0.5);
@@ -137,7 +137,7 @@
 }
 .main-temp .title-h1 a{
     font-weight: 400;
-    color: #1f2f3d;
+    color: #555;
 }
 .main-temp  .title-tag li{
     margin-right: 25px;
@@ -145,12 +145,14 @@
     float: left;
     line-height: 25px;
     font-weight:400;
+    color: #555
 }
 .main-temp  .temp-title>span{
     position: absolute;
     right: 40px;
     font-size: 16px;
     font-weight:400;
+    color: #555;
 }
 .main-temp .temp-content{
     /* width: 80%; */
@@ -190,7 +192,7 @@
     display: flex;
     justify-content: center;
     zoom: 1.2;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.5);
     box-shadow: 5px 5px 10px rgba(72, 183, 255,0.5);
 }
 .title-nav{

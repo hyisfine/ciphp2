@@ -4,48 +4,38 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./static/img/icon/web.ico" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>登录</title>
+    <title>hyis Yoo！- 登录</title>
     <script src="/static/js/common/jquery.js"></script>
+    <link rel="stylesheet" href="/static/dist/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/login.css">
-
 </head>
-
 <body>
-    <div id="app">
-        <form action="/login/checkForm" class="form">
-            <table boder="1" class="table" cellpadding="2" cellspacing="2" align="center" width="400" bgcolor="">
-                <tr>
-                    <td align="center">姓名</td>
-                    <td><input type="text" name="user"></td>
-                </tr>
-                <tr>
-                    <td align="center">密码</td>
-                    <td><input type="password" name="password"></td>
-                </tr>
-                <tr>
-                    <td align="center"> 验证码</td>
-                    <td><input type="text" style="width: 40%" name="captcha"><img src="/captcha/get_captcha" alt=""
-                            onclick="handleImgSrc(this)"> </td>
-                </tr>
-
-            </table>
-            <input type="submit" value="登录">
-            <input type="reset" value="重置">
-        </form>
+    <div class="htmleaf-container">
+        <div class="demo form-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
+                        <form action="/login/checkForm" class="form-horizontal" method="POST">
+                            <div class="heading">登&nbsp;&nbsp;&nbsp;&nbsp;录</div>
+                            <div class="form-group">
+                                <i class="fa fa-user"><img src="/static/img/icon/user.png" alt=""> </i><input required name="user" type="text"
+                                    class="form-control user" placeholder="用户" id="exampleInputEmail1">
+                            </div>
+                            <div class="form-group">
+                                <i class="fa fa-lock"><img src="/static/img/icon/passw.png" alt=""> </i><input required name="password" type="password"
+                                    class="form-control pass" placeholder="密码" />
+                            </div>
+                            <div class="form-group">
+                                <button  class="btn btn-default"><i class="fa fa-arrow-right"></i></button>
+                                <span>欢迎登录到<a href="JavaScript:void(0)" class="create_account">hyis Yoo！</a></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-<script>
-
-    function handleImgSrc(e) {
-        e.src = "/captcha/get_captcha_agin"
-    }
-    //
-    document.onkeydown = function (e) {
-        if (e.keyCode == 13) {
-            $('[type="submit"]').click();
-        }
-    }
-</script>
-
 </html>
